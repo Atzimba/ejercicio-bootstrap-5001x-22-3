@@ -1,6 +1,7 @@
 body {
     background-color: #f3c6a5;
     background-image: url(img/fondo.png);
+    font-family: 'Hind', sans-serif;
 }
 /* Creamos un estilo para el contenedor principal diferente a la clase .container de Bootstrap para no interferir en sus estilos */
 .principal {
@@ -8,4 +9,8 @@ body {
     margin-top: 30px;
     border-radius: 10px;
     padding: 20px;
+}
+/* Estilos generales */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
 }
