@@ -67,7 +67,8 @@
 Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3/components/card/#about  -->
 <div class="row">   
 <h2>Atractivos</h2>
-<div class="col">
+<!-- En este ejemplo estamos aplicando tres clases para las columnas que funcionarán para el responsive. La clase que contiene lg es para la visualización en dispositivos grandes, la clase md para dispositivos medianos y sm para dispositivos pequeños.-->
+<div class="col-lg-3 col-md-6 col-sm-12">
   <!-- Inicia contenido de card -->
   <div class="card">
     <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2019/07/dreamstime_xxl_12979573.jpg" class="card-img-top" alt="La Gran Pirámide de Cholula">
@@ -79,9 +80,9 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
   </div>
   
 </div>
-<div class="col">
+<div class="col-lg-3 col-md-6 col-sm-12">
   <!-- Inicia contenido de card -->
-  <div class="card" style="width: 18rem;">
+  <div class="card" >
     <img src="https://mxcity.mx/wp-content/uploads/2020/12/capilla-real-cholula-puebla-.jpg" class="card-img-top" alt="Capilla Real de Cholula">
     <div class="card-body">
       <h5 class="card-title">Capilla Real de Cholula</h5>
@@ -91,9 +92,9 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
   </div>
 
 </div>
-<div class="col"> 
+<div class="col-lg-3 col-md-6 col-sm-12"> 
    <!-- Inicia contenido de card -->
-  <div class="card" style="width: 18rem;">
+  <div class="card" >
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Convento de San Gabriel</h5>
@@ -103,9 +104,9 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
   </div>
 
 </div>
-<div class="col"> 
+<div class="col-lg-3 col-md-6 col-sm-12"> 
    <!-- Inicia contenido de card -->
-  <div class="card" style="width: 18rem;">
+  <div class="card" >
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Casa del Caballero Águila</h5>
@@ -140,14 +141,15 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
     <p>Cholula cuenta con una buena oferta gastronómica que va desde las tiendas gourmet hasta restaurantes de cadenas internacionales. Pero nada como beber una cerveza y comer botanas típicas en la plaza principal. Entre los platillos de la región se encuentran la sopa cholulteca (a base de poro, tocino y pollo), la cecina con rajas, los gusanos conocidos como “cueclas” y las “orejas de elefante”, tortillas de grandes dimensiones rellenas con frijoles y coronadas con salsa, queso y cebolla.</p>
     <br>
     <P>No puedes irte sin desayunar en el mercado. Los lugareños utilizan ingredientes frescos para preparar antojitos típicos como sopes y quesadillas, así como sin comer mole poblano.</P>
+   <!-- Se pueden asignar estilos a las listas, para revisar las opciones visita el enlace https://getbootstrap.com/docs/5.3/content/typography/#lists  -->
     <ul>
-        <li>
+        <li >
             Ocho 30 (internacional)
            3 Poniente No. 101-A. </li>
-           <li>
+           <li >
             El Zapata (regional)
            12 Oriente, esquina 2 Norte. </li>
-           <li>
+           <li >
                 La Lunita (regional)
                 Av. Morelos Norte No. 419, esquina 6.</li>
     </li>
@@ -179,8 +181,12 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
      <h2>Cómo llegar</h2>
     <!-- Las tablas son uno de los elementos más importantes en HTML, en principio porque los primeros sitios web se estructuraban con esa base, actualmente se utlizan etiquetas de contenedores como div, section, o article entre otras pero las tablas se siguen utiliznado para la visualización de contenidos tabulares.
     
-    Bootstrap da varias opciones de clases que puedes encontrar en https://getbootstrap.com/docs/5.3/content/tables/-->
-    <table class="table table-bordered">
+    Bootstrap da varias opciones de clases que puedes encontrar en https://getbootstrap.com/docs/5.3/content/tables/ -->
+    
+    <!-- Para hacer la tabla responsiva debemos colocar un contenedor y a éste aplicarle la clase .table-responsive . También se puede indicar el tamaño del dispositivo en el que se va a aplicar. -->
+    <div class="table-responsive">
+
+    <table class="table table-striped-columns table-bordered table-sm">
       <!-- La etiqueta thead indica el encabezado de la página. La etiqueta th indica cada una de las celdas del encabezado, la cantidad de etiquetas th indicará la cantidad de columnas de la tabla-->
       <thead>
         <tr>
@@ -191,7 +197,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
         </tr>
       </thead>
       <!-- La etiqueta tbody indica el cuerpo de la tabla. La etiqueta tr indica una fila. La cantidad de etiquetas tr indicará la cantidad de filas que tenga una tabla. Del mismo modo la etiqueta td indica una celda y la cantidad de etiquetas td indicará la cantidad de columnas de la tabla.  -->
-      <tbody>
+      <tbody  class="table-group-divider">
         <tr>
           <th scope="row">Tiempo</th>
           <td>2 hrs</td>
@@ -212,7 +218,46 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
         </tr>
       </tbody>
     </table>
+    </div>
 </div>
+
+<!-- Inicia row -->
+<div class="row">
+  <!-- En ocasiones necesitamos que las columnas se "empujen" sin necesidad de crear columnas vacías, para esto se utliza la clase offset-. Para más información consulta el enlace https://getbootstrap.com/docs/5.3/layout/columns/#offsetting-columns -->
+  <div class="col-md-8 offset-md-2">
+<h2>Solicita información</h2>
+<!-- Formulario -->
+<form>
+  <!-- Bloque para información del nombre -->
+  <!-- La etiqueta label corresponde a la etiqueta del campo, es decir el título que lleva.
+  La etiqueta input se refiere al campo donde se va a ingresar la información. Existen varios tipos de input dependiendo del tipo de contenido, en este caso usamos text, y en el siguiente email. Para más iformación consulta el enlace https://www.w3schools.com/html/html_forms.asp  -->
+  <div class="mb-3">
+    <label  class="form-label">Nombre completo</label>
+    <input type="text" class="form-control"  placeholder="Escribe tu nombre completo">
+    <div id="emailHelp" class="form-text">Escribe tu nombre seguido por tus apellidos.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe tu correo electrónico">
+    <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie.</div>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Indica el tipo de información que requieres</label>
+    <!-- en este caso usamos textarea en vez de input para incluir contenido en forma de texto largo -->
+    <textarea class="form-control" placeholder="Describe la información que necesites"></textarea>
+  
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Acepto políticas</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Solicitar</button>
+</form>
+
+</div>
+</div>
+
+
 <!-- Bootstrap proporciona estilos para los botones, basta colocar la clase .btn en un hipervínculo para que se le asignen estilos de botón. Adicionalmente se debe colocar alguna clase de los diferentes estilos disponibles o crear una clase nueva. Los estilos los encuentras en https://getbootstrap.com/docs/5.3/components/buttons/  -->
     <a href="#" class="btn btn-secondary">Volver arriba</a>
     </div>
