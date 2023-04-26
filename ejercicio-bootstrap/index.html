@@ -29,7 +29,7 @@
     <header>
       <!-- Bootstrap nos proporciona un templete básico para los menús de navegación por medio de la etiqueta nav y la clase navbar.
       Esta información se puede encontrar en https://getbootstrap.com/docs/5.3/components/navbar/ -->
-      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary nav-principal">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Cholula</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +99,7 @@
         Para más referencias puedes consultar https://getbootstrap.com/docs/5.3/components/carousel/ -->
 
         <!-- En la versión 5 los ejemplos de carrusel no están inicializados y hay que hacerlo de manera manual. En este caso, usamos el ejemplo que tiene indicadores, flechas y caption y tuvimos que agregar el atributo  data-bs-ride="false" en la primer línea para que el carrusel esté activo  -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-home" data-bs-ride="false">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -161,7 +161,7 @@
     </div>
 
 <!-- Inicia Row -->
-<div class="row">
+<div class="row bloque-interno">
   <div class="col-12">
     <h2 id="conoce">Conoce más</h2>
     <p>Fue fundada por grupos toltecas que fueron exiliados de Tula cerca del año 500 a.C., lo que la convierte en una de las poblaciones vivas más antiguas de América. Posteriormente los cholultecas fueron tributarios de los mexicas, pero se distinguieron históricamente por su ánimo independiente.</p>
@@ -171,7 +171,7 @@
     </div>
 <!-- Inicia row -->
 <!-- En este row se colocan dos columnas -->
-<div class="row">
+<div class="row bloque-interno">
    <div class="col-7">
     <h2 id="tipico">Lo típico</h2>
     <p>Compra talavera en el Taller de Talavera de la Reyna, donde conservan las técnicas de trabajo del siglo XVI aplicadas a diseños contemporáneos. Las piezas van desde azulejos, platos y vajillas, hasta jarrones, floreros, macetas y cazuelas. </p>
@@ -189,28 +189,32 @@
 <!-- Inicia row -->
 <!-- En este bloque colocamos cuatro columnas. Además en cada columna colocaremos el contenido en formato de cards.
 Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3/components/card/#about  -->
-<div class="row">   
+<div class="row bloque-interno">   
 <h2 id="atractivos">Atractivos</h2>
 <!-- En este ejemplo estamos aplicando tres clases para las columnas que funcionarán para el responsive. La clase que contiene lg es para la visualización en dispositivos grandes, la clase md para dispositivos medianos y sm para dispositivos pequeños.-->
 <div class="col-lg-3 col-md-6 col-sm-12">
+ 
+<!-- En estas vards haremos uso de las ventanas modales. Una ventana modal es aquella que se acciona desde un elemento, generalmente desde un botón y se despliega por encima del contenido mostrando información como puede ser imágenes, textos, botones e incluso se pueden agregar videos. Una ventana modal deberá tener elementos que permitan cerrarla.
+
+Se pueden agregar varias ventanas modales en un mismo documento pero es importante asignarle un ID a cada una como se puede ver en los ejemplos.
+
+Para más información de ventanas modales https://getbootstrap.com/docs/5.3/components/modal/ --> 
+ 
   <!-- Inicia contenido de card -->
   <div class="card">
     <img src="img/piramide.png" class="card-img-top" alt="La Gran Pirámide de Cholula">
     <div class="card-body">
       <h5 class="card-title" id="gran-piramide">Gran Pirámide de Cholula</h5>
-      
-
-
-
+  
 
  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+<button type="button" class="btn btn-chol1" data-bs-toggle="modal" data-bs-target="#modal1">
   Conoce más
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Gran Pirámide de Cholula</h1>
@@ -223,7 +227,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-chol1" data-bs-dismiss="modal">Cerrar</button>
        
       </div>
     </div>
@@ -250,7 +254,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
 
 <!-- Modal -->
 <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Capilla Real de Cholula</h1>
@@ -284,14 +288,14 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
       <h5 class="card-title" id="san-gabriel">Convento de San Gabriel</h5>
       
    
-      <!-- Button trigger modal -->
+<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
   Conoce más
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Convento de San Gabriel</h1>
@@ -322,14 +326,14 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
     <div class="card-body">
       <h5 class="card-title" id="caballero-aguila">Casa del Caballero Águila</h5>
      
-             <!-- Button trigger modal -->
+ <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
   Conoce más
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Casa del Caballero Águila</h1>
@@ -356,7 +360,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
 </div>
 </div>
 <!-- Inicia row -->
-   <div class="row">
+   <div class="row bloque-interno">
     <h2 id="alrededores">Alrededores</h2>
   
    <h3 id="chipilo">Chipilo</h3>
@@ -373,7 +377,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
     </div>
 
     <!-- Inicia row -->
-    <div class="row">
+    <div class="row bloque-interno">
     <h2 id="gastronomia">Gastronomía / Dónde comer</h2>
     <p>Cholula cuenta con una buena oferta gastronómica que va desde las tiendas gourmet hasta restaurantes de cadenas internacionales. Pero nada como beber una cerveza y comer botanas típicas en la plaza principal. Entre los platillos de la región se encuentran la sopa cholulteca (a base de poro, tocino y pollo), la cecina con rajas, los gusanos conocidos como “cueclas” y las “orejas de elefante”, tortillas de grandes dimensiones rellenas con frijoles y coronadas con salsa, queso y cebolla.</p>
     <br>
@@ -393,7 +397,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
     </ul>
 </div>
 <!-- Inicia row -->
-<div class="row">
+<div class="row bloque-interno">
    
     <h2 id="donde-dormir">Dónde dormir</h2>
     <ul>
@@ -414,13 +418,13 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
     </ul>
 </div>
 <!-- Inicia row -->
-   <div class="row">
+   <div class="row bloque-interno">
      <h2 id="como-llegar">Cómo llegar</h2>
 
     <!-- Mapa embebido -->
     <!-- 4:3 aspect ratio -->
-<div class="embed-responsive embed-responsive-4by3">
-  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60331.57017810979!2d-98.35334154840031!3d19.07590675567994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc8a16b13cfb1%3A0x2825dd848e53ec4a!2sCholula%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1681921044390!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="embed-responsive embed-responsive-4by3 mapa-emb">
+  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60331.57017810979!2d-98.35334154840031!3d19.07590675567994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc8a16b13cfb1%3A0x2825dd848e53ec4a!2sCholula%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1681921044390!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
     <!-- Las tablas son uno de los elementos más importantes en HTML, en principio porque los primeros sitios web se estructuraban con esa base, actualmente se utlizan etiquetas de contenedores como div, section, o article entre otras pero las tablas se siguen utiliznado para la visualización de contenidos tabulares.
@@ -466,7 +470,7 @@ Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3
 </div>
 
 <!-- Inicia row -->
-<div class="row">
+<div class="row bloque-interno">
   <!-- En ocasiones necesitamos que las columnas se "empujen" sin necesidad de crear columnas vacías, para esto se utliza la clase offset-. Para más información consulta el enlace https://getbootstrap.com/docs/5.3/layout/columns/#offsetting-columns -->
   <div class="col-md-8 offset-md-2">
 <h2 id="informacion">Solicita información</h2>
